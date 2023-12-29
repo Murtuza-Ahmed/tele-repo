@@ -69,3 +69,38 @@ function multiply(a, b) {
   }
 }
 console.log(multiply(7, 5));
+
+function* fibonacci() {
+  let [prev, curr] = [0, 1];
+  while (true) {
+    [prev, curr] = [curr, prev + curr];
+    yield curr;
+  }
+}
+const fib = fibonacci();
+console.log(fib.next().value);
+console.log(fib.next().value);
+console.log(fib.next().value);
+
+const asyncFunction = async () => {
+  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+  const result = await Promise.race([delay(100), delay(500)]);
+  return result;
+};
+asyncFunction().then((value) => console.log(value));
+
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+let columnSums = [];
+for (let i = 0; i < matrix[0].length; i++) {
+  let sum = 0;
+  for (let j = 0; j < matrix.length; j++) {
+    sum += matrix[j][i];
+  }
+  columnSums.push(sum);
+}
+console.log(columnSums);
