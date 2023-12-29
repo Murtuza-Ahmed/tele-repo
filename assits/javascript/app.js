@@ -43,5 +43,18 @@ getAge(21);
 
 let fName = "Amir";
 let anotherName = { fName };
-console.log(anotherName)
+console.log(anotherName);
 console.log(anotherName.fName);
+
+const fruits = ["apple", "banana", "orange", "banana"];
+console.log(fruits.indexOf("banana")); // Output: 1
+console.log(fruits.indexOf("kiwi")); // Output: -1
+const persons = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 30 },
+  { name: "Charlie", age: 35 },
+];
+const index = persons.findIndex((person) => person.age === 30);
+console.log(index); // Output: 1
+console.log("1" === true);
+console.log("2" === true);
