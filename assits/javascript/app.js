@@ -43,5 +43,5 @@ getAge(21);
 
 let fName = "Amir";
 let anotherName = { fName };
-// console.log(typeof(anotherName))
+console.log(anotherName)
 console.log(anotherName.fName);
