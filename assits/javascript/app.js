@@ -58,3 +58,14 @@ const index = persons.findIndex((person) => person.age === 30);
 console.log(index); // Output: 1
 console.log("1" === true);
 console.log("2" === true);
+
+function multiply(a, b) {
+  if (b === 0) {
+    return 0;
+  } else if (b > 0) {
+    return a + multiply(a, b - 1);
+  } else {
+    return -multiply(a, -b);
+  }
+}
+console.log(multiply(7, 5));
